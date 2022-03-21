@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <title>career changer</title>
+  </head>
+  <body>
+    <div style="
+    position:absolute;
+    width: 50%;
+    height: 100%;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    ">
+      <h1>&emsp;Generator tekstu przebranżowienia się na programistę 1.0</h1>
+      <div style="
+      word-wrap: break-word; 
+      line-height: 139%; 
+      font-family: Arial, Verdana, Helvetica, sans-serif; 
+      font-size: 13.6px;
+      font-weight: 400;
+      text-align: left; 
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      border: 1px solid rgb(221, 221, 221);
+      margin: 4px;
+      padding: 18px;
+      ">
+        
+        <p>
+          <span id="hello"></span>
+        </p>
+        <p>&emsp;
+          <span id="entry"></span>
+          <span id="entry2"></span>
+          <span id="startDesire"></span>
+          <span id="extendDesire"></span>
+          <span id="currentOccupation"></span>
+          <span id="targetOccupation"></span>
+          <span id="startSomething"></span>
+          <span id="extendSomething"></span>
+          <span id="endSomething"></span>
+          <span id="languageSelectionStart"></span>
+          <span id="language"></span>
+          <span id="languageSelectionEnd"></span>
+        </p>
+      </div>
+      <div style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+      height: 100px;
+      ">
+        <button onclick="generate();">Generuj nowy tekst!</button>
+      </div>
+    </div>
+    <script>
+      
+      //career changer text generator
+      function generate() {
+        
+        helloHandler();
+        
+        entryHandler();
+        entry2Handler();
+        
+        startDesireHandler();
+        extendDesireHandler();
+        currentOccupationHandler();
+        targetOccupationHandler();
+        
+        //something
+        startSomethingHandler();
+        extendSomethingHandler();
+        endSomethingHandler();
+        
+        languageSelectionStartHandler();
+        languageHandler();
+        languageSelectionEndHandler();
+      }
+      window.onload = generate;
+      
+      //hello
+      let helloText = 
+      [
+      'Hej.',
+      'Hej:)',
+      'Hejka.',
+      'Hejka, są tu jacyś komputerowcy?',
+      'Cześć!',
+      'Krótko.',
+      'Czołem!',
+      'Sie ma!',
+      'Dzień dobry.',
+      'Pochwalony.',
+      'Dobry wieczór.',
+      'Kopę lat!',
+      'Joł!',
+      'Niech będzie pochwalony Jezus Chrystus!',
+      'Państwo wybaczą.',
+      'Szczęść Boże!',
+      'Co słychać!',
+      'Witam.',
+      'Witam forumowiczów.',
+      'Witam serdecznie.',
+      'Witam wszystkich.'
+      ];
+      const hello = document.querySelector('#hello');
+      function helloHandler() {
+        hello.textContent = helloText[Math.floor(Math.random() * helloText.length)];
+      }
+      
+      
+      hello.onclick = helloHandler;
+      
+      //entry 1
+      let entryText = 
+      [
+      
+      
+      'Mam prośbę o ocenę.',
+      'Mam prośbę o ocenę mojego CV.',
+      'Mam prośbę o ocenę mojego planu.',
+      
+      'Mam prośbę o opinię.',
+      'Mam prośbę o zaopiniowanie.',
+      'Mam prośbe o zdanie.',
+      'Mam prośbę o radę.',
+      'Mam prośbę o wskazówkę.',
+      'Mam prośbe o pomoc.',
+      'Mam prośbę o podpowiedzenie.',
+      
+      'Proszę mi doradzić.',
+      
+      'Nie wiem czy to odpowiedni dział, ale niech będzie.',
+      'Być może dla niektórych mój temat zabrzmi śmiesznie, ale chcę prosić o radę.',
+      'Piszę po trochu, żeby się wygadać, a po trochu, licząc na rady, bo już nie wiem, co mam robić.',
+      'Mam nadzieję że źle nie trafiłem.',
+      'Zastanawiam się czy dobrze trafiłem.'
+      ];
+      const entry = document.querySelector('#entry');
+      
+      function entryHandler() {
+        
+        entry.textContent = entryText[Math.floor(Math.random() * entryText.length)];
+        
+      }
+      
+      entry.onclick = entryHandler;
+      
+      //entry 2
+      let entry2Text = 
+      [
+      
+      'Posiadam ponad 20 lat.',
+      'Posiadam ponad 30 lat.',
+      'Posiadam ponad 40 lat.',
+      'Posiadam ponad 50 lat.',
+      'Posiadam ponad 60 lat.',
+      
+      'Mieszkam w mieście.',
+      'Mieszkam na wsi.',
+      
+      'Zasiedziałem się w obecnej pracy 4 miesiące.',
+      'Zasiedziałem się w obecnej pracy 2 lata.',
+      'Zasiedziałem się w obecnej pracy 3 lata.',
+      'Zasiedziałem się w obecnej pracy 4 lata.',
+      
+      ];
+      const entry2 = document.querySelector('#entry2');
+      
+      function entry2Handler() {
+        
+        entry2.textContent = entry2Text[Math.floor(Math.random() * entry2Text.length)];
+        
+      }
+      
+      entry2.onclick = entry2Handler;
+      
+      //start desire
+      let startDesireText = 
+      [
+      'Mam zamiar ',
+      'Mam nadzieję ',
+      'Chcę ',
+      'Czy dam radę ',
+      'Czy jestem w stanie ',
+      'Chcę zdecydowanie ',
+      'Pragnę ',
+      'Mam apetyt ',
+      'Mam chrapkę ',
+      'Odczuwam potrzebę ',
+      'Proszę nie gniewać się, chcę ',
+      'Proszę mi pomóc ',
+      'Proszę mi pomóc, chcę',
+      'Jak najlepiej ',
+      'Jak ',
+      'Wydaje mi się że nie mam dużych wymagań aby',
+      'Macie jakieś rady jak ',
+      'Myślę jak ',
+      'Nie jestem programistą ale chcę ',
+      'Tydzień temu postanowiłem '
+      ];
+      const startDesire = document.querySelector('#startDesire');
+      function startDesireHandler() {
+        startDesire.textContent = startDesireText[Math.floor(Math.random() * startDesireText.length)];
+      }
+      
+      startDesire.onclick = startDesireHandler;
+      
+      //extend desire
+      let extendDesireText = 
+      [
+      'przebranżowić się ',
+      'spełnić postanowienie ',
+      'aplikować ',
+      'zaprezentować się dobrze ',
+      'zmienić branżę ',
+      'zmienić zawód ',
+      'praktykować ',
+      'przysposobić się ',
+      'uciec ',
+      'zaprawić się ',
+      'przeszlifować się ',
+      'przeprojektować się ',
+      'przeorientować się ',
+      'zmienić zawód ',
+      'odmienić swój zawód ',
+      'zrobić projekt w jeden dzień ',
+      'zrobić projekt w tydzień ',
+      'zmienić branżę ',
+      'się zmotywować '
+      ];
+      const extendDesire = document.querySelector('#extendDesire');
+      function extendDesireHandler() {
+        extendDesire.textContent = extendDesireText[Math.floor(Math.random() * extendDesireText.length)];
+      }
+      
+      extendDesire.onclick = extendDesireHandler;
+      
+      //current occupation
+      let currentOccupationText = 
+      [
+      '',
+      'od zera  ',
+      'z stolarza ',
+      'z ślusarza ',
+      'z lekarza ',
+      'z humanisty ',
+      'z księdza ',
+      'z operatora maszyn CNC ',
+      'z spawacza ',
+      'z szlifierza ',
+      'z montera ',
+      'z managera ',
+      'z menedżera ',
+      'z menadżera ',
+      'z frezera ',
+      'z kontrolera jakości ',
+      'z operatora manualnego ',
+      'z mechanika silników lotniczych ',
+      'z inspektora BHP ',
+      'z rzemieślnika ',
+      'z specjalisty do spraw rekrutacji ',
+      'z kierownika projektów ',
+      'z kierownika budowy ',
+      'z młodszego pracownika wsparcia produkcji ',
+      'z własciciela firmy ',
+      'z księgowości ',
+      'z audytora ',
+      'z dyrektora finansowego ',
+      'z zarządcy '
+      ];
+      const currentOccupation = document.querySelector('#currentOccupation');
+      function currentOccupationHandler() {
+        currentOccupation.textContent = currentOccupationText[Math.floor(Math.random() * currentOccupationText.length)];
+      }
+      
+      currentOccupation.onclick = currentOccupationHandler;
+      
+      //target occupation
+      let targetOccupationText = 
+      [
+      'na programistę.',
+      'na analityka danych.',
+      'na automatyka.',
+      'na webdeva.',
+      'na młodszego programistę.',
+      'na informatyka.',
+      'na mida.',
+      'na juniora programowania.',
+      'na frontend developera.',
+      'na developera.',
+      'na web developera.',
+      'na kodera.',
+      'na programatora.',
+      'na komputerowca.',
+      'na game developera.',
+      'na network programmera.',
+      'na specjalistę cybersecurity.',
+      'na testera.',
+      'na scrum mastera.',
+      'w stronę IT.',
+      'na klepacza kodu.'
+      ];
+      const targetOcupation = document.querySelector('#targetOccupation');
+      function targetOccupationHandler() {
+        targetOccupation.textContent = targetOccupationText[Math.floor(Math.random() * targetOccupationText.length)];
+      }
+      
+      targetOccupation.onclick = targetOccupationHandler;
+      
+      //start something 
+      let startSomethingText = 
+      [
+      'Poczytałem trochę forum, ',
+      'Czytam od jakiegoś czasu fora programistyczne, ',
+      'Chcę pracować w IT, ',
+      'Zrobiłem projekt, ',
+      'Ukończyłem nie te studia, ',
+      'Dopiero się uczę programowania, ',
+      'Ukończyłem technikum informatyczne, ',
+      'Zacząłem studia informatyczne, ',
+      'Pomyślałem o rozwoju w branży IT, ',
+      'Szukam IT inspiracji, ',
+      'Lubię szukać dziury w całym, ',
+      'Uwielbiam, pracę z cyframi, ',
+      'Brakuje mi pomysłu czego mam się uczyć, ',
+      'Szybko ogarnąłem podstawy, ',
+      'Mam analityczny umysł, ',
+      'Do IT zawsze było mi blisko (od początku gimnazjum), ',
+      'Szukam firm, które rozwijają swój własny projekt, ',
+      'Posiadam PC, '
+      
+      ];
+      const startSomething = document.querySelector('#startSomething');
+      function startSomethingHandler() {
+        startSomething.textContent = startSomethingText[Math.floor(Math.random() * startSomethingText.length)];
+      }
+      
+      startSomething.onclick = startSomethingHandler;
+      
+      //extend  something 
+      let extendSomethingText = 
+      [
+      'oglądałem kanały na youtube ',
+      'przede mną długa droga ',
+      'czytam wymagania z ogłoszeń ',
+      'mam naprawdę dużo czasu ',
+      'stworzyłem mały programik ',
+      'mam styczność z kodem ',
+      'mam już coraz więcej pojęcia ',
+      'póki co wiem czego nie chce robić ',
+      'Python mnie też przekonuje ',
+      'Python mnie też inspiruje ',
+      'czuję się dostatecznie technicznie na siłach ',
+      'koniecznie chcę tworzyć oprogramowanie ',
+      'chcę robić to co lubię ',
+      'jestem bardzo zrelaksowany '
+      
+      
+      ];
+      const extendSomething = document.querySelector('#extendSomething');
+      function extendSomethingHandler() {
+        extendSomething.textContent = extendSomethingText[Math.floor(Math.random() * extendSomethingText.length)];
+      }
+      
+      extendSomething.onclick = extendSomethingHandler;
+      
+      //end something
+      let endSomethingText = 
+      [
+      'w tej tematyce.',
+      'i chcę osiągnąć cel.',
+      'i ustanawiam sobie cel.',
+      'i powoli ogarniam.',
+      'i szlifuje umiejętności programistyczne.',
+      'i chcę stworzyć bloga.',
+      'i chcę pisać funkcjonalności.',
+      'i jestem w szoku.',
+      'i chcę uczyć się teori.',
+      'i ciężko pracuję.',
+      'i kupiłem sobie dodatkowy monitor.',
+      'i chcę pracować zdalnie.',
+      'i jestem staranny.',
+      'i chcę zdobywać doświadczenie.',
+      'i chcę się czuć spełniony.',
+      'i sam złożyłem sobie kompa.'
+      
+      ];
+      const endSomething = document.querySelector('#endSomething');
+      function endSomethingHandler() {
+        endSomething.textContent = endSomethingText[Math.floor(Math.random() * endSomethingText.length)];
+      }
+      
+      endSomething.onclick = endSomethingHandler;
+      
+      //start selection of programming language 
+       let languageSelectionStartText = 
+      [
+      'Na swój pierwszy język wybrałem ',
+      'Może ktoś podpowie czy wybierając ',
+      'Po ciężkich namysłach wybrałem ',
+      'Nie jestem strachliwy i wybrałem ',
+      'Trochę znam i wybrałem ',
+      'Mam wątpliwości, czy wybierając ',
+      'Trochę mi się rozjaśniło w głowie i wybrałem ',
+      'Klepie własne projekty w ',
+      'Znalazlem kilka ofert pracy w ',
+      'Chciałbym pracować w ',
+      'Przerabiam kurs programowania w '
+      
+      ];
+      const languageSelectionStart = document.querySelector('#languageSelectionStart');
+      function languageSelectionStartHandler() {
+        languageSelectionStart.textContent = languageSelectionStartText[Math.floor(Math.random() * languageSelectionStartText.length)];
+      }
+      
+      languageSelectionStart.onclick = languageSelectionStartHandler;
+      
+      //programming language 
+       let languageText = 
+      [
+      'C,',
+      'C++,',
+      'Cpp,',
+      'C#,',
+      'Java,',
+      'JavaScript,',
+      'PHP,',
+      'php,',
+      'SQL,'
+      ];
+      const language = document.querySelector('#language');
+      function languageHandler() {
+        language.textContent = languageText[Math.floor(Math.random() * languageText.length)];
+      }
+      
+      language.onclick = languageHandler;
+      
+      //end selection of programming language 
+       let languageSelectionEndText = 
+      [
+      ' to dobry wybór?',
+      ' to jeszcze długa droga przede mną?',
+      ' to daje mi dużą szansę na wybicie?',
+      ' to jest mile widziany język?',
+      ' to jest bardzo dobra decyzja  w ciężkich czasach?',
+      ' to dobre na start ?'
+      ];
+      const languageSelectionEnd = document.querySelector('#languageSelectionEnd');
+      function languageSelectionEndHandler() {
+        languageSelectionEnd.textContent = languageSelectionEndText[Math.floor(Math.random() * languageSelectionEndText.length)];
+      }
+      
+      languageSelectionEnd.onclick = languageSelectionEndHandler;
+      
+    </script>
+  </body>
+</html>
